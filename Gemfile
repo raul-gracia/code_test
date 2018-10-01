@@ -46,6 +46,7 @@ group :test do
   gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.1'
   gem 'cucumber-rails', '~> 1.6'
+  gem 'shoulda-matchers'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
