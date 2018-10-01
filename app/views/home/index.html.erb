@@ -14,11 +14,11 @@
       <%= flash[:alert]%>
       </div>
     <% end%>
-    <%= simple_form_for(:lead, as: :lead, method: :post, url: root_path) do |f| %>
-    <%= f.input :full_name, required: true %>
+    <%= simple_form_for(@lead, method: :post, url: root_path) do |f| %>
+    <%= f.input :name, label: 'Full Name', required: true %>
     <%= f.input :business_name, required: true %>
     <%= f.input :email, required: true %>
-    <%= f.input :telephone, as: :tel, required: true %>
+    <%= f.input :telephone_number, as: :tel, required: true %>
     <%= f.submit 'Send', class: 'btn btn-primary' %>
     <% end %>
   </div>

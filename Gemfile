@@ -12,7 +12,7 @@ gem 'popper_js', '~> 1.12.3'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1'
 gem 'sass-rails', '~> 5.0'
-gem 'simple_form'
+gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'turbolinks', '~> 5.0.0'
 gem 'uglifier', '4.1.3'
@@ -33,6 +33,8 @@ group :development, :test do
   gem 'rubocop'
   gem 'sshkit-sudo'
   gem 'sqlite3', '~> 1.3'
+  gem 'better_errors', '~> 2.5'
+  gem 'binding_of_caller', '~> 0.8.0'
 end
 
 group :test do
