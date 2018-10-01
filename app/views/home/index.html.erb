@@ -1,2 +1,29 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="py-5 text-center">
+  <%= image_tag 'makeitcheaper-logo-black', class: 'd-block mx-auto mb-4'%>
+  <h2>Welcome to Make It Cheaper</h2>
+  <p class="lead">Please enter your details below for a callback</p>
+</div>
+<div class="row">
+  <div class="col-md-8 order-md-1 offset-md-2">
+    <% if flash[:notice] %>
+      <div class="alert alert-success" role="alert">
+      <%= flash[:notice]%>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class="alert alert-danger" role="alert">
+      <%= flash[:alert]%>
+      </div>
+    <% end%>
+    <%= simple_form_for(:lead, as: :lead, method: :post, url: root_path) do |f| %>
+    <%= f.input :full_name, required: true %>
+    <%= f.input :business_name, required: true %>
+    <%= f.input :email, required: true %>
+    <%= f.input :telephone, as: :tel, required: true %>
+    <%= f.submit 'Send', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+
+<br>
+<br>
+<br>

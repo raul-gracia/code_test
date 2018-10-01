@@ -3,13 +3,16 @@ Given("I visit the home page") do
 end
 
 Given("I fill the form with valid info") do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in :lead_full_name, with: 'John Smith'
+  fill_in :lead_business_name, with: 'Google Inc'
+  fill_in :lead_email, with: 'Google Inc'
+  fill_in :lead_telephone, with: "07223211232"
 end
 
 When("I submit the form") do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_button 'Send'
 end
 
 Then("I should see a success message") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Thank you!')
 end

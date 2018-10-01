@@ -73,10 +73,10 @@ So that I can request a call back
 ```
 
 # Acceptance criteria
-- Page displayed with a basic form to request a call back
-- Leads are received successfully by the API on form submission
-- Form fields are validating accordingly
-- A thank you message is displayed to let you know that your request was submitted successfully and that MakeItCheaper will contact you
-- When form failed to submit due to being down or an error we want the user to see a nice message instead of a generic error.
+- [ ] Page displayed with a basic form to request a call back
+- [ ] Leads are received successfully by the API on form submission
+- [ ] Form fields are validating accordingly
+- [ ] A thank you message is displayed to let you know that your request was submitted successfully and that MakeItCheaper will contact you
+- [ ] When form failed to submit due to being down or an error we want the user to see a nice message instead of a generic error.
 
 Bonus: Create a decent looking homepage (don’t reinvent the wheel use bootstrap)
