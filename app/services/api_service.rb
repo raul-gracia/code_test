@@ -17,10 +17,10 @@ class ApiService
         lead_service.send("valid?=", true)
       when 400
         parse_response_errors(res.parsed_response["errors"], lead)
-        lead_service.error = "Please check the errors below" 
+        lead_service.error = "Please check the errors below"
       when 401, 500
         lead_service.send("valid?=", false)
-        lead_service.error = res.parsed_response["message"] 
+        lead_service.error = "There was a error with the API Service: #{res.parsed_response["message"]}"
       end
     else
       lead_service.send("valid?=", false)
@@ -53,7 +53,7 @@ class ApiService
     if match.any?
       parsed = OpenStruct.new(field: '', message: '')
       parsed.field = match.first.to_sym
-      parsed.message = match.last    
+      parsed.message = match.last
 
       parsed
     end
